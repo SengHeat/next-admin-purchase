@@ -1,7 +1,7 @@
 'use client'
 
-import { useAuthStore } from '@/store/auth.store'
-import { UserRole } from '@/types/api.types'
+import { useAuthStore } from 'src/store/auth.store'
+import { UserRole } from 'src/types/api.types'
 
 /**
  * Custom hook for authentication
@@ -55,7 +55,7 @@ export function useAuth() {
     if (!user) return 'U'
     return user.name
       .split(' ')
-      .map((n) => n[0])
+      .map((n: any[]) => n[0])
       .join('')
       .toUpperCase()
       .slice(0, 2)

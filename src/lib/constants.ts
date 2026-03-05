@@ -1,5 +1,5 @@
-import { UserRole, StatusType } from '@/types/api.types'
-import { OrderStatus, OrderPriority } from '@/types/order.types'
+import { UserRole, StatusType } from 'src/types/api.types'
+import { OrderStatus, OrderPriority } from 'src/types/order.types'
 
 /**
  * API Configuration

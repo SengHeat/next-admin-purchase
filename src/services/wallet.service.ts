@@ -1,4 +1,4 @@
-import { api } from '@/lib/api'
+import { api } from 'src/lib/api'
 import {
   Wallet,
   Transaction,
@@ -6,8 +6,8 @@ import {
   CreateTopupRequest,
   ApproveTopupRequest,
   RejectTopupRequest,
-} from '@/types/wallet.types'
-import { ApiResponse, ListResponse } from '@/types/api.types'
+} from 'src/types/wallet.types'
+import { ApiResponse, ListResponse } from 'src/types/api.types'
 
 /**
  * Wallet service
@@ -16,9 +16,9 @@ export const walletService = {
   /**
    * Get all wallets
    */
-  getWallets: async (params?: any): Promise<ListResponse> => {
+  getWallets: async (params?: any): Promise<ListResponse<any>> => {
     const response = await api.get<any, ApiResponse>('/wallets', { params })
-    return response as ListResponse
+    return response as ListResponse<any>
   },
 
   /**
@@ -32,12 +32,12 @@ export const walletService = {
   /**
    * Get wallet transactions
    */
-  getTransactions: async (walletId: string | number, params?: any): Promise<ListResponse> => {
+  getTransactions: async (walletId: string | number, params?: any): Promise<ListResponse<any>> => {
     const response = await api.get<any, ApiResponse>(
       `/wallets/${walletId}/transactions`,
       { params },
     )
-    return response as ListResponse
+    return response as ListResponse<any>
   },
 
   /**
@@ -51,9 +51,9 @@ export const walletService = {
   /**
    * Get topup requests
    */
-  getTopupRequests: async (params?: any): Promise<ListResponse> => {
+  getTopupRequests: async (params?: any): Promise<ListResponse<any>> => {
     const response = await api.get<any, ApiResponse>('/wallets/topup/requests', { params })
-    return response as ListResponse
+    return response as ListResponse<any>
   },
 
   /**

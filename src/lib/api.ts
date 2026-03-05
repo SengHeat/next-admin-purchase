@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosError, InternalAxiosRequestConfig } from 'axios'
 import { API_CONFIG, TOKEN_KEY } from './constants'
-import { ApiResponse } from '@/types/api.types'
+import { ApiResponse } from 'src/types/api.types'
 
 /**
  * Create axios instance with interceptors

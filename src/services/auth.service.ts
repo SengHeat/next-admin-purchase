@@ -1,7 +1,7 @@
-import { api, setAuthToken, removeAuthToken } from '@/lib/api'
-import { AUTH_ROUTES } from '@/lib/constants'
-import { LoginRequest, LoginResponse, User, LogoutResponse, RefreshTokenRequest } from '@/types/auth.types'
-import { ApiResponse } from '@/types/api.types'
+import { api, setAuthToken, removeAuthToken } from 'src/lib/api'
+import { AUTH_ROUTES } from 'src/lib/constants'
+import { LoginRequest, LoginResponse, User, LogoutResponse, RefreshTokenRequest } from 'src/types/auth.types'
+import { ApiResponse } from 'src/types/api.types'
 
 /**
  * Authentication service
